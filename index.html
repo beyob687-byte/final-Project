@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addis Eats</title>
+  <link rel="stylesheet" href="/Day24/style.css">
+</head>
+<body>
+  <header>
+    <h1>Addis Eats</h1>
+    <input id="search" type="text" placeholder="Search dishes..." />
+  </header>
+  
+  <main>
+
+    
+    <section id="menu" aria-label="Menu">
+    <ul id="listMenu"></ul>
+    </section>
+    
+    <aside aria-label="Your order">
+      <h2>Your Cart</h2>
+      <ul id="cart"></ul>
+      <p id="total" class="price">0.00 ETB</p>
+
+      <form id="checkout" novalidate>
+        <label>Name
+          <input id="name" required />
+        </label>
+        
+        <label>Phone (TeleBirr)
+          <input id="phone" placeholder="09xxxxxxxx" />
+        </label>
+        
+        <label>Delivery area
+          <select id="area">
+            <option>Bole</option>
+            <option>Kazanchis</option>
+            <option>Megenagna</option>
+          </select>
+        </label>
+        
+        <p id="form-error" class="error" aria-live="polite"></p>
+        
+        <button type="submit" class="checkout-btn">Place Order</button>
+      </form>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Bole, Addis Ababa | TeleBirr</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

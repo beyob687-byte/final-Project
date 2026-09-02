@@ -1,0 +1,154 @@
+:root {
+  --gray: #12161aa6;
+  --mon: #5a5811;
+  --line: #e2e8f0;
+  --ink: #1a2433;
+  --radius: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#search {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.dish {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish h3 {
+  color: var(--ink);
+  margin: 0 0 10px 0;
+}
+
+.price {
+  color: var(--mon);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+  background-color: var(--gray);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+aside {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  height: fit-content;
+}
+
+#cart {
+  list-style: none;
+  padding: 0;
+}
+
+#cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.rm {
+  background-color: #dc3545;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--ink);
+}
+
+/* added form  */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--ink);
+  gap: 5px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-family: inherit;
+}
+
+.checkout-btn {
+  background-color: var(--ink);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px;
+  margin-top: 5px;
+}
+
+.checkout-btn:hover {
+  background-color: #333;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+  min-height: 20px;
+}
